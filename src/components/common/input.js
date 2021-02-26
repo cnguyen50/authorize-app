@@ -1,9 +1,11 @@
 import React from 'react'
 import { TextInput, View, Text } from 'react-native'
 
-const Input = () => {
+const Input = ({ label }) => {
   return (
-
+    <View>
+      <Text>{label}</Text>
+    </View>
   )
 }
 
