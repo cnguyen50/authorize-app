@@ -5,6 +5,9 @@ const Input = ({ label }) => {
   return (
     <View>
       <Text>{label}</Text>
+      <TextInput 
+        style-={{ height:20, width: 100 }}
+      />
     </View>
   )
 }
