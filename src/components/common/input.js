@@ -23,8 +23,12 @@ const styles = {
     lineHeight: 23,
     flex: 2
   },
-  labelStyles: {},
-  conatinerStyle: {}
+  labelStyles: {
+    fontSize: 18,
+    paddingLeft: 20,
+    flex: 1
+  },
+  containerStyle: {}
 }
 
 export { Input }
