@@ -28,7 +28,12 @@ const styles = {
     paddingLeft: 20,
     flex: 1
   },
-  containerStyle: {}
+  containerStyle: {
+    height: 40,
+    flex: 1,
+    flexDirection: 'row',
+    align: 'center'
+  }
 }
 
 export { Input }
