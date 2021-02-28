@@ -2,10 +2,12 @@ import React from 'react'
 import { TextInput, View, Text } from 'react-native'
 
 const Input = ({ label, value, onChangeText }) => {
+  const { inputStyles, labelStyles, containerStyle } = styles
   return (
-    <View>
-      <Text>{label}</Text>
+    <View styles={containerStyle}>
+      <Text style={labelStyles}>{label}</Text>
       <TextInput
+        style={inputStyles}
         value ={value}
         onChangeText={onChangeText}
         style-={{ height:20, width: 100 }}
