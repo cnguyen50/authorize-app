@@ -15,7 +15,8 @@ class LoginForm extends Component {
             onChangeText={email => this.setState({ email })}
           />
         </CardSection>
-          <Input 
+          <Input
+            secureTextEntry 
             placeholder="password"
             label="Password"
             value={this.state.password}
