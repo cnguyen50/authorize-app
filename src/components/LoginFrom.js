@@ -40,7 +40,7 @@ class LoginForm extends Component {
           
         />
         
-        <Text>
+        <Tex stytle={styles.errorTextStyle}>
           {this.state.error}
         </Text>
 
@@ -51,6 +51,14 @@ class LoginForm extends Component {
         </CardSection>
       </Card>
     )
+  }
+}
+
+const styles = {
+  errorTextStyle: {
+    fontSize: 20,
+    alignSelf: 'center',
+    color: 'red'
   }
 }
 
