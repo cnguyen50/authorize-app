@@ -10,7 +10,7 @@ class LoginForm extends Component {
 
     firebase.auth().signInWithEmailAndPassword(email, password)
       .catch(() => {
-        console.log("error occured")
+        firebase.auth().createUserWithEmailAndPassword(email,password)
       })
   }
 
