@@ -1,9 +1,11 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, ActivityIndicator } from 'react-native'
 
 const Spinner = () => {
   return (
-    <View></View>
+    <View>
+      <ActivityIndicator />
+    </View>
   )
 }
 
