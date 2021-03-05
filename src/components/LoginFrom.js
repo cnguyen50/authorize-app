@@ -40,7 +40,7 @@ class LoginForm extends Component {
           
         />
         
-        <Tex stytle={styles.errorTextStyle}>
+        <Text stytle={styles.errorTextStyle}>
           {this.state.error}
         </Text>
 
