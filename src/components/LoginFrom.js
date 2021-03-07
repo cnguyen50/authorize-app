@@ -4,7 +4,7 @@ import { Button, Card, CardSection, Input } from './common'
 import { Text } from 'react-native'
 
 class LoginForm extends Component {
-  state = { email : '', password: '', error: '' };
+  state = { email : '', password: '', error: '', loading: false };
 
   onButtonPress() {
     const { email, password } = this.state
