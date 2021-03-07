@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import { Button, Card, CardSection, Input } from './common'
+import { Button, Card, CardSection, Input, Spinner } from './common'
 import { Text } from 'react-native'
 
 class LoginForm extends Component {
@@ -18,6 +18,18 @@ class LoginForm extends Component {
             this.setState({ error: 'Authentication failed'})
           })
       })
+  }
+
+  renderButton() {
+    if (this.state.loading) {
+      return <Spinner size='small' />
+    }
+
+    return (
+      <Button onPress={this.onButtonPress.bind(this)}>
+        Log in
+      </Button>
+    )
   }
 
   render() {
@@ -47,9 +59,7 @@ class LoginForm extends Component {
         </Text>
 
         <CardSection>
-          <Button onPress={this.onButtonPress.bind(this)}>
-            Log in
-          </Button>
+
         </CardSection>
       </Card>
     )
