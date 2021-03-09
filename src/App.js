@@ -29,15 +29,12 @@ class App extends Component {
 
   renderContent() {
     switch (this.state.loggedIn) {
-      case true :
+      case true:
         return <Button> Log out </Button>
-    }
-    if (this.state.logggedIn) {
-      return (
-        <Button>
-          Log out
-        </Button>
-      )
+      case false:
+        return <LoginForm/>
+      default:
+        return <Spinner size="Large" />
     }
   }
   
@@ -45,7 +42,6 @@ class App extends Component {
     return (
       <View>
         <Header headertext="Authentication" />
-        <LoginForm />
       </View>
     )
   }
