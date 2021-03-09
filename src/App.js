@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { View, Text, Button } from 'react-native'
-import { Header, Button } from './components/common'
+import { Header, Button, Spinner } from './components/common'
 import firebase from 'firebase'
 import LoginForm from './components/LoginFrom'
 
 class App extends Component {
-  state = { loggedin: null }
+  state = { loggedIn: null }
 
   componentWillMount() {
     firebase.initializeApp({
@@ -20,15 +20,19 @@ class App extends Component {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ loggedin: true })
+        this.setState({ loggedIn: true })
       } else {
-        this.setState({ loggedin: false })
+        this.setState({ loggedIn: false })
       }
     })
   } 
 
   renderContent() {
-    if (this.state.logggedin) {
+    switch (this.state.loggedIn) {
+      case true :
+        return <Button> Log out </Button>
+    }
+    if (this.state.logggedIn) {
       return (
         <Button>
           Log out
