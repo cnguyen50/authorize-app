@@ -15,10 +15,17 @@ class App extends Component {
       appId: "1:264953494366:web:474366fc97f07dcb49adcf",
       measurementId: "G-E6LGP34REC"
     })
-  }
-}
 
-class App extends Component {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ loggedin: true })
+      } else {
+        this.setState({ loggedin: false })
+      }
+    })
+
+  } 
+  
   render() {
     return (
       <View>
@@ -28,5 +35,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App
